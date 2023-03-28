@@ -3,8 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
-require("./db/Conn");
+require("../server/db/conn");
 const router = require("./routes/router");
 
 const defaultdata = require("./insertdata/default");
