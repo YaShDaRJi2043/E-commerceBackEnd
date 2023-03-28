@@ -24,9 +24,9 @@ app.listen(PORT, () => {
   console.log(`connection start on PORT ${PORT}`);
 });
 
-// defaultdata();
-// Mdata();
-// Edata();
-// Mendata();
-// womendata();
-// Homekitchendata();
+defaultdata();
+Mdata();
+Edata();
+Mendata();
+womendata();
+Homekitchendata();
