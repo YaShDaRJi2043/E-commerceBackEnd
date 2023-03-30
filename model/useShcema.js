@@ -45,12 +45,12 @@ const useSchema = new mongoose.Schema({
   buyitems: Array,
 });
 
-// useSchema.pre("save", async function (next) {
-//   if (this.isModified("password")) {
-//     this.password = await bcrypt.hash(this.password, 12);
-//   }
-//   next();
-// });
+useSchema.pre("save", async function (next) {
+  if (this.isModified("password")) {
+    this.password = await bcrypt.hash(this.password, 12);
+  }
+  next();
+});
 
 useSchema.methods.genrateAuthtoken = async function (req, res) {
   try {
