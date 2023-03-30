@@ -64,6 +64,7 @@ exports.signin = async (req, res) => {
     }
 
     const uservalid = await datas.findOne({ email: email });
+    console.log(uservalid);
 
     if (uservalid) {
       const checkuser = await bcrypt.compare(password, uservalid.password);
